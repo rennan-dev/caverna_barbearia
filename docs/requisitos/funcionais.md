@@ -4,32 +4,82 @@ Este documento descreve os requisitos funcionais do sistema, ou seja, **as funci
 
 ---
 
-## 👤 Usuário Comum
+## 1. Cliente
 
-- RF01: O usuário deverá poder criar uma conta no sistema.
-- RF02: O usuário deverá poder fazer login com e-mail e senha.
-- RF03: O usuário deverá visualizar a lista de barbeiros disponíveis.
-- RF04: O usuário deverá visualizar os serviços oferecidos por cada barbeiro e o valor.
-- RF05: O usuário deverá poder agendar um horário com um barbeiro, escolhendo data, horário, serviço e o valor total.
-- RF06: O usuário deverá poder visualizar seus agendamentos futuros.
-- RF07: O usuário deverá poder cancelar ou reagendar um agendamento (antes do horário marcado).
-- RF08: O usuário deverá poder editar suas informações pessoais (nome, telefone, etc).
+1. **Cadastro e Autenticação**
+
+   * O cliente deve poder criar uma conta com e-mail e senha.
+   * O cliente deve poder fazer login e logout.
+   * O cliente deve poder recuperar senha via e-mail.
+
+2. **Perfil do Cliente**
+
+   * Visualizar e editar dados pessoais (nome, telefone, etc...).
+   * Consultar histórico de agendamentos (passados, futuros, cancelados).
+
+3. **Consulta de Serviços e Disponibilidade**
+
+   * Exibir lista de serviços oferecidos (nome, descrição, duração, preço).
+   * Mostrar calendário com horários disponíveis de cada barbeiro.
+
+4. **Agendamento de Horário**
+
+   * Selecionar serviço, barbeiro, data e horário disponíveis.
+   * Confirmar agendamento e receber número de reserva.
+
+5. **Cancelamento e Remarcação**
+
+   * Cancelar agendamento respeitando prazo mínimo (ex.: até 4h antes).
+   * Remarcar agendamento para outra data/hora disponível.
+
+6. **Notificações**
+
+   * Receber e-mail e/ou SMS de confirmação, lembrete e aviso de cancelamento.
+
+7. **Avaliação e Feedback**
+
+   * Após atendimento, avaliar serviço e barbeiro com nota e comentário.
 
 ---
 
-## 🛠️ Administrador
+## 2. Barbeiro
 
-- RF09: O administrador deverá poder fazer login com credenciais especiais.
-- RF10: O administrador deverá poder cadastrar, editar e excluir barbeiros.
-- RF11: O administrador deverá poder cadastrar, editar e excluir serviços (corte, barba, combo etc).
-- RF12: O administrador deverá poder associar serviços específicos a cada barbeiro.
-- RF13: O administrador deverá visualizar todos os agendamentos realizados, com filtros por barbeiro, data e usuário.
-- RF14: O administrador poderá bloquear horários específicos na agenda de um barbeiro.
+1. **Dashboard de Atendimentos**
+
+   * Visualizar lista de próximos atendimentos e seu status.
+   * Visualizar taxa de ocupação diária e semanal.
+
+2. **Gerenciamento de Serviços**
+
+   * Criar, editar e remover serviços (nome, duração, preço).
+
+3. **Gerenciamento de Agenda Individual**
+
+   * Definir dias e horários de trabalho, folgas individuais e feriados.
+   * Bloquear manualmente horários.
+
+4. **Relatórios e Estatísticas**
+
+   * Consultar total de atendimentos por período.
+   * Visualizar serviços mais populares e receita gerada.
 
 ---
 
-## 🛡️ Funcionalidades Gerais
+## 3. Administrador
 
-- RF15: O sistema deverá evitar conflitos de horários (não permitir dois agendamentos para o mesmo barbeiro no mesmo horário).
-- RF16: O sistema deverá validar todos os campos obrigatórios nos formulários.
-- RF17: O sistema deverá garantir que apenas usuários autenticados acessem áreas restritas.
+1. **Cadastro de Barbeiros**
+
+   * Adicionar novos barbeiros ao sistema com dados pessoais e foto.
+
+2. **Exclusão de Barbeiros**
+
+   * Remover barbeiros existentes do sistema, mantendo histórico de atendimentos.
+
+3. **Definição de Folgas Coletivas**
+
+   * Definir datas de folga e feriados para todos os barbeiros simultaneamente.
+   * Aplicar folgas recorrentes (ex.: todo primeiro sábado do mês) a todos.
+
+4. **Visualização de Relatórios Gerais**
+
+   * Acessar relatórios consolidados de atendimentos e receitas de todo o negócio.
